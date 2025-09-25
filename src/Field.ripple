@@ -1,0 +1,11 @@
+import { FormContext } from './context'
+
+export default component Field({ name, ...props }) {
+    const form = FormContext.get()
+    const handleInput = (e) => {
+        console.log('handleInput called for', name, ':', e.target.value);
+        form.onChange(name, e.target.value);
+    }
+
+    <input {...props} value={@form.values[name]} oninput={handleInput} />
+}

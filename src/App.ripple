@@ -1,3 +1,11 @@
+import { createForm } from './form';
+import Form from './Form.ripple';
+import Field from './Field.ripple';
+
 export default component App() {
-    <h1> {'Hello World'} </h1>
+    const form = createForm();
+
+    <Form>
+        <Field name="name" type="text" />
+    </Form>
 }

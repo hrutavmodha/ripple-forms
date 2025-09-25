@@ -1,0 +1,14 @@
+import { createContext } from 'ripple';
+import TestChild from './TestChild.ripple';
+
+export const MyContext = createContext(null);
+
+export default component TestContext() {
+    const value = 'Hello from Context';
+    MyContext.set(value);
+
+    <div>
+        <h1>{"Test Context"}</h1>
+        <TestChild />
+    </div>
+}

@@ -1,0 +1,14 @@
+import { FormContext } from './context'
+import { createForm } from './form'
+
+export default component Form(props) {
+    const { children } = props;
+    const form = createForm();
+    setTimeout(() => {
+        FormContext.set(form);
+    }, 0);
+
+    <form>
+        <children />
+    </form>
+}
