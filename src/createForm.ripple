@@ -1,0 +1,7 @@
+import { track } from 'ripple'
+
+export function createForm() {
+    return { 
+        values: track({})
+    }
+}

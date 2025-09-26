@@ -1,11 +1,13 @@
-import { createForm } from './form';
+import { createForm } from './createForm.ripple';
 import Form from './Form.ripple';
 import Field from './Field.ripple';
 
 export default component App() {
-    const form = createForm();
-
-    <Form>
+    const form = createForm()
+    form.@values = {
+        name: 'Hello World'
+    }
+    <Form data={form['values']}>
         <Field name="name" type="text" />
     </Form>
 }
